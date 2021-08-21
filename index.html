@@ -15,7 +15,7 @@
 
         #searchbar {
             display: flex;
-            padding-left: 400px;
+            padding-right: 300px;
             padding-top: 13px;
             padding-bottom: 13px;
             border-radius: 20px;
@@ -27,9 +27,46 @@
             text-align: left;
         }
 
-        .searchbutton {
+        input {
+            outline: none;
+            padding: 20px;
+        }
+
+        .searchpref{
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            padding-top: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        #search1 {
+            font-size: 15px;
+            background-color: #f0f0f0;
+            border-color: #f0f0f0
+        }
+
+        #search2 {
+            font-size: 15px;
+            background-color: #f0f0f0;
+            border-color: #f0f0f0;
+        }
+
+        .navbar {
+            display: grid;
+            grid-template-columns: 1fr 1fr 10fr 1fr 1fr;
+        }
+
+        .footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: lightgrey;
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr 10fr 1fr 1fr 1fr;
+            text-align: center;
         }
 
     </style>
@@ -38,14 +75,27 @@
     </head>
 
     <body>
-        <nav>About Store Gmail Images</nav>
+        <div class="navbar">
+            <nav id="about">About</nav>
+            <nav id="store">Store</nav>
+            <nav id="blank"></nav>
+            <nav id="gmail">Gmail</nav>
+            <nav id="images">Images</nav>
+        </div>
         <img src="google-logo.png" id="google-logo" alt="Google Logo">
         <input type="text" id="searchbar">
-        <div class="searchbutton">
-            <button>Google Search</button>
+        <div class="searchpref">
+            <button id="search1">Google Search</button>
+            <button id="search2">I'm Feeling Lucky</button>
         </div>
-        <div class="searchbutton">
-            <button>I'm Feeling Lucky</button>
+        <div class="footer">
+            <p>Advertising</p>
+            <p>Business</p>
+            <p>How Search works</p>
+            <p>Carbon neutral since 2007</p>
+            <p>Privacy</p>
+            <p>Terms</p>
+            <p>Settings</p>
         </div>
     </body>
 </html>
